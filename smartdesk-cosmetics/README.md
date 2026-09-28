@@ -76,19 +76,6 @@ Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufber
 
 | Bereich | Eingesetzte Technologie |
 | :--- | :--- |
-| Frontend | Next.js 15 mit App Router, TypeScript |
-| Gestaltung | Tailwind CSS, individuelles Glassmorphism-Design |
-| Sprachmodell | Google Gemini 2.5 Flash über Next.js API-Routen |
-| Spracherkennung | Web Speech Recognition API |
-| Sprachausgabe | ElevenLabs Turbo v2.5, Browser-TTS als Rückfalloption |
-| Icons | Lucide Icons |
-| Hosting | Vercel |
-
-
-## Technologie-Stack
-
-| Bereich | Eingesetzte Technologie |
-| :--- | :--- |
 | Frontend | [Next.js 15](https://nextjs.org/) mit App Router, [TypeScript](https://www.typescriptlang.org/) |
 | Gestaltung | [Tailwind CSS](https://tailwindcss.com/), individuelles Glassmorphism-Design |
 | Sprachmodell | [Google Gemini 2.5 Flash](https://ai.google.dev/) über Next.js API-Routen |
