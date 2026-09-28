@@ -57,6 +57,18 @@ Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validi
 
 Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Warteliste benachrichtigt und freie Termine erneut angeboten werden könnten. Dazu kommen Erinnerungs- und Bestätigungsabläufe. Belegung und Umsätze beruhen auf Beispieldaten, eine Wirkung auf Terminausfälle oder eine Wiederbesetzungsquote wurde nicht untersucht.
 
+## Wissenskonzept: fünfstufige Prüfpipeline
+
+Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist ein Wissenskonzept mit mehrstufiger Prüfung vorgesehen. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
+
+1. **Erfassung:** Eine zeitlich getaktete Datenerfassung legt eine unfertige Wissenskarte an.
+2. **Recherche:** Drei unabhängige Recherche-Agenten suchen parallel nach allen Feldern.
+3. **Abgleich:** Die Agenten gleichen ihre Ergebnisse ab und erstellen einen gemeinsamen Entwurf.
+4. **Kritik:** Ein Kritiker-Agent greift den Entwurf gezielt an, etwa bei Kontraindikationen und Gegenstudien.
+5. **Freigabe:** Ein Schiedsrichter-Agent bewertet den Konsens. Unterhalb eines Schwellenwerts entscheidet ein Mensch.
+
+Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufbereitet werden kann. Es ersetzt keine fachliche Freigabe.
+
 ## Technologie-Stack
 
 | Bereich | Eingesetzte Technologie |
