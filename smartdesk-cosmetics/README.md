@@ -10,15 +10,15 @@
 
 **[Live-Demo öffnen](https://smartdesk-cosmetics.vercel.app)** · Die Video-Präsentation ist über die Startseite erreichbar.
 
-Dieses Verzeichnis dokumentiert das Projekt als Teil eines öffentlichen Portfolios. Der Quellcode wird nicht veröffentlicht.
+Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Für Fragen zur Technik erreichst du mich gern direkt.
 
 ## Projektidee
 
-Während einer Behandlung klingelt das Telefon, eine Kundin fragt nach einem Termin und kurzfristig wird ein Platz im Kalender frei. SmartDesk Cosmetics untersucht, wie KI solche wiederkehrenden Abläufe in Kosmetikstudios unterstützen kann.
+Während einer Behandlung klingelt das Telefon, eine Kundin fragt nach einem Termin, und gleichzeitig wird kurzfristig ein Platz im Kalender frei. SmartDesk Cosmetics untersucht, wie KI solche wiederkehrenden Abläufe in Kosmetikstudios unterstützen kann, ohne den persönlichen Kundenservice zu verlieren.
 
-Die Projektdemo verbindet einen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Sie richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
+Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine 5-stufige, evidenzbasierte Wissensdatenbank, dazu kommen automatisierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
 
-Im Mittelpunkt steht die Verbindung von **Geschäftsprozessen, Nutzerführung und technischer Umsetzung**: Welche Aufgaben lassen sich unterstützen, welche Informationen braucht die KI und wo liegen die Grenzen der Automatisierung?
+Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und technischer Umsetzung: Welche Aufgaben lassen sich unterstützen, welche Informationen braucht die KI und wo liegen die Grenzen der Automatisierung?
 
 ## Funktions- und Entwicklungsstatus
 
