@@ -84,6 +84,20 @@ Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufber
 | Icons | Lucide Icons |
 | Hosting | Vercel |
 
+
+## Technologie-Stack
+
+| Bereich | Eingesetzte Technologie |
+| :--- | :--- |
+| Frontend | [Next.js 15](https://nextjs.org/) mit App Router, [TypeScript](https://www.typescriptlang.org/) |
+| Gestaltung | [Tailwind CSS](https://tailwindcss.com/), individuelles Glassmorphism-Design |
+| Sprachmodell | [Google Gemini 2.5 Flash](https://ai.google.dev/) über Next.js API-Routen |
+| Spracherkennung | Web Speech API des Browsers |
+| Sprachausgabe | [ElevenLabs](https://elevenlabs.io/) Turbo v2.5, Browser-TTS als Rückfalloption |
+| Icons | [Lucide Icons](https://lucide.dev/) |
+| Hosting | [Vercel](https://vercel.com/) |
+
+
 ## Datenschutz und verantwortungsvoller KI-Einsatz
 
 - **Serverseitige API-Schlüssel:** Die Anbindung von Gemini und ElevenLabs erfolgt über serverseitige API-Routen; die zugehörigen Schlüssel werden nicht im öffentlichen Portfolio bereitgestellt.
