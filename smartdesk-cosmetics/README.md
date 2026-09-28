@@ -10,13 +10,13 @@
 
 **[Live-Demo öffnen](https://smartdesk-cosmetics.vercel.app)** · Die Video-Präsentation ist über die Startseite erreichbar.
 
-Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Für Fragen zur Technik erreichst du mich gern direkt. wolf.creation.mail@gmail.com
+Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Für Fragen zur Technik erreichst du mich gern direkt. [wolf.creation.mail@gmail.com]
 
 ## Projektidee
 
 Während einer Behandlung klingelt das Telefon, eine Kundin fragt nach einem Termin, und gleichzeitig wird kurzfristig ein Platz im Kalender frei. SmartDesk Cosmetics untersucht, wie KI solche wiederkehrenden Abläufe in Kosmetikstudios unterstützen kann, ohne den persönlichen Kundenservice zu verlieren.
 
-Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine 5-stufige, evidenzbasierte Knowledge Base, dazu kommen automatisierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
+Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine fünfstufige Knowledge Base mit mehrstufiger Prüfung, dazu kommen simulierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
 
 Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und technischer Umsetzung: Welche Aufgaben lassen sich unterstützen, welche Informationen braucht die KI und wo liegen die Grenzen der Automatisierung?
 
@@ -26,7 +26,7 @@ Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und 
 
 | Modul | Status | Umfang |
 | :--- | :--- | :--- |
-| **Sprachassistent „Glow“ im Browser** | Integriert | Sprachdialog mit Gemini und ElevenLabs, Streaming-Sprachausgabe, Einbeziehung des aktuellen Datums sowie Tap-to-Talk und Unterbrechungsfunktion. |
+| **Sprachassistent „Glow“ im Browser** | Integriert | Fotorealistischer Video-Avatar auf Sprachdialog mit Gemini und ElevenLabs, Streaming-Sprachausgabe, Einbeziehung des aktuellen Datums sowie Tap-to-Talk und Unterbrechungsfunktion. |
 | **Benutzeroberfläche und Navigation** | Integriert | Fünf interaktive Ansichten: Startseite, SuperAdmin, Studio, Kundenportal und QA-Testing. |
 | **Sprachnormalisierung** | Integriert | Aufbereitung deutscher Fachbegriffe, Währungen, Uhrzeiten und Lichtschutzfaktor-Angaben für die Sprachausgabe. |
 | **QA-Testing-Hub** | Integriert | Interaktiver Testbereich mit 100 kategorisierten Testfällen zu Wirkstofffragen, sensiblen Beratungssituationen und Antwortzeiten. |
@@ -59,9 +59,9 @@ Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validi
 Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Warteliste benachrichtigt und freie Termine erneut angeboten werden könnten. Dazu kommen Erinnerungs- und Bestätigungsabläufe. Belegung und Umsätze beruhen auf Beispieldaten, eine Wirkung auf Terminausfälle oder eine Wiederbesetzungsquote wurde nicht untersucht.
 
 
-## Knowledge Base Konzept: fünfstufige Prüfpipeline
+## Knowledge Base: fünfstufige Prüfpipeline
 
-Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist ein Wissenskonzept mit mehrstufiger Prüfung vorgesehen. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
+Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist eine Knowledge Base mit mehrstufiger Prüfung vorgesehen. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
 
 1. **Erfassung:** Eine zeitlich getaktete Datenerfassung legt eine unfertige Wissenskarte an.
 2. **Recherche:** Drei unabhängige Recherche-Agenten suchen parallel nach allen Feldern.
@@ -71,6 +71,54 @@ Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist ein Wis
 
 Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufbereitet werden kann.
 
+## Architektur
+
+Die Demo besteht aus einer Next.js-Anwendung im Browser, serverseitigen API-Routen und zwei externen KI-Diensten. Gestrichelt dargestellt sind geplante Erweiterungen.
+
+```mermaid
+flowchart LR
+    subgraph CLIENT["Browser (Next.js 15, React)"]
+        STT["Spracherkennung<br>(Web Speech API)"]
+        UI["Ansichten: Startseite, Kundenportal,<br>Studio-Cockpit, SuperAdmin, Testing-Hub"]
+    end
+
+    subgraph SERVER["Next.js API-Routen"]
+        CHAT["/api/chat<br>Kontext und Prompt-Aufbau"]
+        NORM["Sprachnormalisierung"]
+        TTS["/api/tts<br>Streaming-Sprachausgabe"]
+    end
+
+    subgraph EXT["Externe Dienste"]
+        GEM["Google Gemini 2.5 Flash"]
+        ELE["ElevenLabs Turbo v2.5"]
+    end
+
+    subgraph DATA["Beispiel- und Testdaten"]
+        KB["Knowledge Base:<br>Visualisierung der Prüfpipeline"]
+        TEST["Testing-Hub:<br>100 Testfälle"]
+    end
+
+    subgraph PLAN["Geplant"]
+        SIP["SIP/VoIP-Telefonanbindung"]
+        CAL["Anbindung an Buchungssoftware"]
+        SKIN["Kameragestützte Hautanalyse"]
+    end
+
+    STT -->|"Text"| CHAT
+    CHAT -->|"Prompt und Verlauf"| GEM
+    GEM -->|"Antwort"| CHAT
+    CHAT --> NORM --> TTS
+    TTS --> ELE
+    ELE -->|"Audio-Stream"| UI
+    UI --- KB
+    UI --- TEST
+    SIP -.-> CHAT
+    CAL -.-> UI
+    SKIN -.-> UI
+
+    classDef planned stroke-dasharray: 5 5;
+    class SIP,CAL,SKIN planned;
+```
 
 ## Technologie-Stack
 
