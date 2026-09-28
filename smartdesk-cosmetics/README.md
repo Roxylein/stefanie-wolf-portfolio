@@ -16,13 +16,13 @@ Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Fü
 
 Während einer Behandlung klingelt das Telefon, eine Kundin fragt nach einem Termin, und gleichzeitig wird kurzfristig ein Platz im Kalender frei. SmartDesk Cosmetics untersucht, wie KI solche wiederkehrenden Abläufe in Kosmetikstudios unterstützen kann, ohne den persönlichen Kundenservice zu verlieren.
 
-Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine fünfstufige Knowledge Base mit mehrstufiger Prüfung, dazu kommen simulierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
+Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung.    Dazu kommen ein fünfstufiges Knowledge-Base-Konzept zur Prüfung von Fachwissen und simulierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
 
 Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und technischer Umsetzung: Welche Aufgaben lassen sich unterstützen, welche Informationen braucht die KI und wo liegen die Grenzen der Automatisierung?
 
 ## Funktions- und Entwicklungsstatus
 
-**Integriert** bezeichnet Funktionen innerhalb der Projektdemo. **Simuliert** kennzeichnet Abläufe mit Beispieldaten. **Konzept / geplant** bezeichnet noch nicht vollständig umgesetzte Erweiterungen. Diese Angaben beschreiben den Entwicklungsstand, keine Freigabe für den produktiven Studiobetrieb.
+**Integriert** bezeichnet Funktionen innerhalb der Projektdemo. **Simuliert** kennzeichnet Abläufe mit Beispieldaten. **Geplant** bezeichnet noch nicht umgesetzte Erweiterungen. Diese Angaben beschreiben den Entwicklungsstand, keine Freigabe für den produktiven Studiobetrieb.
 
 | Modul | Status | Umfang |
 | :--- | :--- | :--- |
@@ -33,7 +33,7 @@ Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und 
 | **Studio-Cockpit** | Simuliert | Tageskalender, Belegungsübersicht, Umsatz-Projektionen und Schulungsmatrix mit Beispieldaten. |
 | **WhatsApp Gap-Filler und Erinnerungen** | Simuliert | Ablauf zur Benachrichtigung von Wartelisten-Kundinnen und zur Terminbestätigung; keine produktive WhatsApp-Anbindung. |
 | **Kundenportal** | Simuliert | Beispielansichten für Pflegeplan, Behandlungshistorie und personalisierte Kundenkommunikation. |
-| **Fünfstufige Knowledge Base** | Konzept / QA | Strukturierte Aufbereitung und Prüfung von Antworten zu kosmetischen Wirkstoffen und Beratungssituationen. |
+| **Fünfstufige Knowledge Base** | Simuliert | Ausgearbeitetes Architektur- und Datenkonzept, im SuperAdmin-Hub interaktiv visualisiert (Quellenbaum, Schemas, Debattenprotokolle). Die Debatten beruhen auf Beispieldatensätzen, ein Live-Crawling findet nicht statt. |
 | **Telefonanbindung über SIP/VoIP** | Geplant | Entgegennahme klassischer Anrufe über die Studiorufnummer. |
 | **Anbindung an Studio- und Buchungssoftware** | Geplant | Synchronisation von Terminen und Verfügbarkeiten mit externen Systemen. |
 | **3D Studio-Raumplaner** | Geplant | Visualisierung von Kabinenbelegung und Geräte-Rüstzeiten als mögliche Erweiterung |
@@ -50,8 +50,8 @@ Zur Antwortzeit macht die Demo bewusst keine Angabe, da sie unter anderem von Ve
 
 ### Knowledge Base und Qualitätssicherung
 
-Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Knowledge Base](#knowledge-base-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft, Stillzeit oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
-
+Glow beantwortet Fachfragen anhand kosmetischer Regeln, die als Systemvorgaben hinterlegt sind, etwa zu Schwangerschaft und Stillzeit. Die [Knowledge Base](#knowledge-base-fünfstufige-prüfpipeline) zeigt, wie dieses Wissen künftig geprüft und gepflegt werden soll. Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft, Stillzeit oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
+   
 Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validierung. Das Konzept ersetzt keine Diagnose und keine individuelle fachliche Freigabe.
 
 ### Terminorganisation und Gap-Filler
@@ -61,7 +61,7 @@ Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Wartelist
 
 ## Knowledge Base: fünfstufige Prüfpipeline
 
-Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist eine Knowledge Base mit mehrstufiger Prüfung vorgesehen. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
+   Die Knowledge Base ist als fünfstufige Prüfpipeline ausgearbeitet und im SuperAdmin-Hub mit Beispieldatensätzen visualisiert. Sie zeigt den Soll-Ablauf, wie Fachwissen für einen Sprachassistenten geprüft werden kann. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
 
 1. **Erfassung:** Eine zeitlich getaktete Datenerfassung legt eine unfertige Wissenskarte an.
 2. **Recherche:** Drei unabhängige Recherche-Agenten suchen parallel nach allen Feldern.
@@ -76,7 +76,7 @@ Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufber
 Die Demo besteht aus einer Next.js-Anwendung im Browser, serverseitigen API-Routen und zwei externen KI-Diensten. Gestrichelt dargestellt sind geplante Erweiterungen.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph CLIENT["Browser (Next.js 15, React)"]
         STT["Spracherkennung<br>(Web Speech API)"]
         UI["Ansichten: Startseite, Kundenportal,<br>Studio-Cockpit, SuperAdmin, Testing-Hub"]
