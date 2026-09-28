@@ -47,6 +47,7 @@ Glow verbindet browserbasierte Spracherkennung, KI-generierte Antworten und synt
 
 Zur Antwortzeit macht die Demo bewusst keine Angabe, da sie unter anderem von Verbindung, Modell und Sprachausgabe abhängt.
 
+
 ### Wissenskonzept und Qualitätssicherung
 
 Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Wissenskonzept](#wissenskonzept-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
@@ -56,6 +57,7 @@ Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validi
 ### Terminorganisation und Gap-Filler
 
 Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Warteliste benachrichtigt und freie Termine erneut angeboten werden könnten. Dazu kommen Erinnerungs- und Bestätigungsabläufe. Belegung und Umsätze beruhen auf Beispieldaten, eine Wirkung auf Terminausfälle oder eine Wiederbesetzungsquote wurde nicht untersucht.
+
 
 ## Wissenskonzept: fünfstufige Prüfpipeline
 
@@ -68,6 +70,7 @@ Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist ein Wis
 5. **Freigabe:** Ein Schiedsrichter-Agent bewertet den Konsens. Unterhalb eines Schwellenwerts entscheidet ein Mensch.
 
 Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufbereitet werden kann. Es ersetzt keine fachliche Freigabe.
+
 
 ## Technologie-Stack
 
