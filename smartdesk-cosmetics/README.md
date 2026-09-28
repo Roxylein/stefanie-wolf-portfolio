@@ -16,7 +16,7 @@ Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Fü
 
 Während einer Behandlung klingelt das Telefon, eine Kundin fragt nach einem Termin, und gleichzeitig wird kurzfristig ein Platz im Kalender frei. SmartDesk Cosmetics untersucht, wie KI solche wiederkehrenden Abläufe in Kosmetikstudios unterstützen kann, ohne den persönlichen Kundenservice zu verlieren.
 
-Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine 5-stufige, evidenzbasierte Wissensdatenbank, dazu kommen automatisierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
+Die Projektdemo verbindet einen multimodalen KI-Sprachassistenten mit Oberflächen für Studioorganisation, Kundenkommunikation und Qualitätssicherung. Grundlage ist eine 5-stufige, evidenzbasierte Knowledge Base, dazu kommen automatisierte Terminabläufe. Das Projekt richtet sich an Kosmetikstudios und zeigt auch Anwendungsszenarien im Umfeld von Medical Beauty.
 
 Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und technischer Umsetzung: Welche Aufgaben lassen sich unterstützen, welche Informationen braucht die KI und wo liegen die Grenzen der Automatisierung?
 
@@ -34,7 +34,7 @@ Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und 
 | **WhatsApp Gap-Filler und Erinnerungen** | Simuliert | Ablauf zur Benachrichtigung von Wartelisten-Kundinnen und zur Terminbestätigung; keine produktive WhatsApp-Anbindung. |
 | **3D Studio-Raumplaner** | Simuliert | Darstellung von Kabinenbelegung und Geräte-Rüstzeiten. |
 | **Kundenportal** | Simuliert | Beispielansichten für Pflegeplan, Behandlungshistorie und personalisierte Kundenkommunikation. |
-| **Fünfstufiges Wissenskonzept** | Konzept / QA | Strukturierte Aufbereitung und Prüfung von Antworten zu kosmetischen Wirkstoffen und Beratungssituationen. |
+| **Fünfstufige Knowledge Base** | Konzept / QA | Strukturierte Aufbereitung und Prüfung von Antworten zu kosmetischen Wirkstoffen und Beratungssituationen. |
 | **Telefonanbindung über SIP/VoIP** | Geplant | Entgegennahme klassischer Anrufe über die Studiorufnummer. |
 | **Anbindung an Studio- und Buchungssoftware** | Geplant | Synchronisation von Terminen und Verfügbarkeiten mit externen Systemen. |
 | **Kameragestützte Hautanalyse** | Geplant | Untersuchung eines möglichen visuellen Assistenzmoduls; Aussagekraft und fachliche Grenzen sind noch zu evaluieren. |
@@ -48,9 +48,9 @@ Glow verbindet browserbasierte Spracherkennung, KI-generierte Antworten und synt
 Zur Antwortzeit macht die Demo bewusst keine Angabe, da sie unter anderem von Verbindung, Modell und Sprachausgabe abhängt.
 
 
-### Wissenskonzept und Qualitätssicherung
+### Knowledge Base Konzept und Qualitätssicherung
 
-Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Wissenskonzept](#wissenskonzept-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
+Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Knowledge Base](#knowledge-base-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
 
 Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validierung. Das Konzept ersetzt keine Diagnose und keine individuelle fachliche Freigabe.
 
@@ -59,7 +59,7 @@ Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validi
 Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Warteliste benachrichtigt und freie Termine erneut angeboten werden könnten. Dazu kommen Erinnerungs- und Bestätigungsabläufe. Belegung und Umsätze beruhen auf Beispieldaten, eine Wirkung auf Terminausfälle oder eine Wiederbesetzungsquote wurde nicht untersucht.
 
 
-## Wissenskonzept: fünfstufige Prüfpipeline
+## Knowledge Base Konzept: fünfstufige Prüfpipeline
 
 Damit Glow Fachfragen nicht frei aus einem Sprachmodell beantwortet, ist ein Wissenskonzept mit mehrstufiger Prüfung vorgesehen. Offene Datenquellen wie das EU-Kosmetikregister liefern Stoffdaten, aber keine Behandlungsregeln, etwa zu Karenzzeiten vor einem Peeling. Diese Lücke soll die Pipeline schließen:
 
