@@ -87,22 +87,6 @@ Das Konzept soll zeigen, wie Wissen für einen Sprachassistenten prüfbar aufber
 
 ## Datenschutz und verantwortungsvoller KI-Einsatz
 
-- **Serverseitige API-Schlüssel:** Die Anbindung von Gemini und ElevenLabs erfolgt über serverseitige API-Routen; die zugehörigen Schlüssel werden nicht im öffentlichen Portfolio bereitgestellt.
-- **KI-Kennzeichnung:** Glow wird als KI-Assistent kenntlich gemacht.
-- **Datenverarbeitung:** Die Sprachfunktionen beziehen externe Dienste und browserabhängige Spracherkennung ein. Aussagen zur Speicherung und Verarbeitung müssen deshalb die gesamte Verarbeitungskette berücksichtigen; eine pauschale Zusicherung, dass keinerlei Audiodaten gespeichert werden, wird hier nicht gegeben.
-- **Fachliche Grenzen:** Die Demo ist auf organisatorische Unterstützung und kosmetische Informationsszenarien ausgerichtet. Medizinische Entscheidungen bleiben qualifizierten Fachpersonen vorbehalten.
-- **Entwicklungsstand:** Datenschutz und KI-Transparenz sind Gestaltungsthemen des Projekts. Eine abgeschlossene Prüfung der DSGVO- oder EU-AI-Act-Konformität wird nicht behauptet.
-
-**Bitte die öffentliche Demo ausschließlich mit fiktiven Angaben testen und keine personenbezogenen Kunden- oder Gesundheitsdaten eingeben.**
-
-## Projektteam
-
-Konzipiert, gestaltet und entwickelt von **Timo Seng, Olaf Marohn, Sören Klose, Gerd Zschäbitz und Stefanie Wolf**.
-
-Die Dokumentation wird im Portfolio von Stefanie Wolf präsentiert.
-
-## Datenschutz und verantwortungsvoller KI-Einsatz
-
 - **Serverseitige API-Schlüssel:** Gemini und ElevenLabs werden über serverseitige API-Routen angebunden. Die Schlüssel liegen nicht im Browser und sind nicht Teil des Portfolios.
 - **KI-Kennzeichnung:** Glow wird als KI-Assistent kenntlich gemacht.
 - **Datenverarbeitung:** Die Sprachfunktionen nutzen externe Dienste, die Spracherkennung zudem browserabhängig. Aussagen zur Speicherung müssen die gesamte Verarbeitungskette berücksichtigen, eine pauschale Zusicherung gibt es deshalb nicht.
