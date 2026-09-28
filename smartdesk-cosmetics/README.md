@@ -10,7 +10,7 @@
 
 **[Live-Demo öffnen](https://smartdesk-cosmetics.vercel.app)** · Die Video-Präsentation ist über die Startseite erreichbar.
 
-Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Für Fragen zur Technik erreichst du mich gern direkt.
+Diese README gibt einen Einblick in Idee, Aufbau und Umsetzung des Projekts. Für Fragen zur Technik erreichst du mich gern direkt. wolf.creation.mail@gmail.com
 
 ## Projektidee
 
@@ -32,11 +32,11 @@ Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und 
 | **QA-Testing-Hub** | Integriert | Interaktiver Testbereich mit 100 kategorisierten Testfällen zu Wirkstofffragen, sensiblen Beratungssituationen und Antwortzeiten. |
 | **Studio-Cockpit** | Simuliert | Tageskalender, Belegungsübersicht, Umsatz-Projektionen und Schulungsmatrix mit Beispieldaten. |
 | **WhatsApp Gap-Filler und Erinnerungen** | Simuliert | Ablauf zur Benachrichtigung von Wartelisten-Kundinnen und zur Terminbestätigung; keine produktive WhatsApp-Anbindung. |
-| **3D Studio-Raumplaner** | Simuliert | Darstellung von Kabinenbelegung und Geräte-Rüstzeiten. |
 | **Kundenportal** | Simuliert | Beispielansichten für Pflegeplan, Behandlungshistorie und personalisierte Kundenkommunikation. |
 | **Fünfstufige Knowledge Base** | Konzept / QA | Strukturierte Aufbereitung und Prüfung von Antworten zu kosmetischen Wirkstoffen und Beratungssituationen. |
 | **Telefonanbindung über SIP/VoIP** | Geplant | Entgegennahme klassischer Anrufe über die Studiorufnummer. |
 | **Anbindung an Studio- und Buchungssoftware** | Geplant | Synchronisation von Terminen und Verfügbarkeiten mit externen Systemen. |
+| **3D Studio-Raumplaner** | Geplant | Visualisierung von Kabinenbelegung und Geräte-Rüstzeiten als mögliche Erweiterung |
 | **Kameragestützte Hautanalyse** | Geplant | Untersuchung eines möglichen visuellen Assistenzmoduls; Aussagekraft und fachliche Grenzen sind noch zu evaluieren. |
 
 ## Ausgewählte Funktionen
@@ -48,9 +48,9 @@ Glow verbindet browserbasierte Spracherkennung, KI-generierte Antworten und synt
 Zur Antwortzeit macht die Demo bewusst keine Angabe, da sie unter anderem von Verbindung, Modell und Sprachausgabe abhängt.
 
 
-### Knowledge Base Konzept und Qualitätssicherung
+### Knowledge Base und Qualitätssicherung
 
-Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Knowledge Base](#knowledge-base-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
+Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Knowledge Base](#knowledge-base-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft, Stillzeit oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
 
 Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validierung. Das Konzept ersetzt keine Diagnose und keine individuelle fachliche Freigabe.
 
