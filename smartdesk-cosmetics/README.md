@@ -43,21 +43,19 @@ Im Mittelpunkt steht die Verbindung von Geschäftsprozessen, Nutzerführung und 
 
 ### Sprachassistenz mit „Glow“
 
-Glow verbindet browserbasierte Spracherkennung, KI-generierte Antworten und synthetische Sprachausgabe. Gesprächsverlauf und aktuelles Datum dienen als Kontext. Eine Unterbrechungsfunktion ermöglicht es, laufende Antworten zu stoppen; Browser-Sprachausgabe dient als Rückfalloption.
+Glow verbindet browserbasierte Spracherkennung, KI-generierte Antworten und synthetische Sprachausgabe. Gesprächsverlauf und aktuelles Datum dienen als Kontext, eine Unterbrechungsfunktion stoppt laufende Antworten. Fällt die Sprachausgabe des Dienstes aus, springt die Browser-Stimme ein. Deutsche Fachbegriffe, Währungen und Uhrzeiten werden vor der Ausgabe für eine natürlichere Aussprache aufbereitet.
 
-Die Demo enthält keine garantierte Latenzangabe. Die Antwortzeit hängt unter anderem von Verbindung, Modellverarbeitung und Sprachausgabe ab.
+Zur Antwortzeit macht die Demo bewusst keine Angabe, da sie unter anderem von Verbindung, Modell und Sprachausgabe abhängt.
 
 ### Wissenskonzept und Qualitätssicherung
 
-Das fünfstufige Wissenskonzept adressiert Fragen zu Inhaltsstoffen und kosmetischen Anwendungen, beispielsweise zu Retinoiden, Fruchtsäuren, Peptiden und Antioxidantien. Testfälle berücksichtigen auch sensible Situationen wie Schwangerschaft, Stillzeit und Vorbehandlungen.
+Glow soll Fachfragen aus geprüften Wissenskarten beantworten statt frei aus dem Sprachmodell. Wie diese fünfstufige Prüfung aufgebaut ist, steht im Abschnitt [Wissenskonzept](#wissenskonzept-fünfstufige-prüfpipeline). Die Testfälle im Testing-Hub enthalten auch sensible Situationen wie Schwangerschaft oder Vorbehandlungen und machen Antworten und Fehlerbilder nachvollziehbar.
 
-Der Testing-Hub dient dazu, Antworten und Fehlerbilder nachvollziehbar zu untersuchen. Die Anzahl der Testfälle ist keine Aussage über bestandene Tests oder medizinische Validierung. Das Konzept bietet keine Diagnose oder individuelle medizinische Freigabe für Produkte und Behandlungen.
+Die Testfälle belegen weder bestandene Prüfungen noch eine medizinische Validierung. Das Konzept ersetzt keine Diagnose und keine individuelle fachliche Freigabe.
 
 ### Terminorganisation und Gap-Filler
 
-Die Simulation zeigt, wie nach einer Absage passende Wartelisten-Kundinnen benachrichtigt und freie Termine erneut angeboten werden könnten. Ergänzend werden Erinnerungs- und Bestätigungsabläufe dargestellt.
-
-Belegung und Umsatzdarstellungen beruhen auf Beispieldaten. Eine tatsächliche Verringerung von Terminausfällen oder eine bestimmte Wiederbesetzungsquote wurde damit nicht nachgewiesen.
+Die Simulation zeigt, wie nach einer Absage passende Kundinnen von der Warteliste benachrichtigt und freie Termine erneut angeboten werden könnten. Dazu kommen Erinnerungs- und Bestätigungsabläufe. Belegung und Umsätze beruhen auf Beispieldaten, eine Wirkung auf Terminausfälle oder eine Wiederbesetzungsquote wurde nicht untersucht.
 
 ## Technologie-Stack
 
