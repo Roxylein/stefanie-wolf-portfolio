@@ -55,7 +55,7 @@ Um den genauen Umsetzungsstand transparent darzustellen, ist jedes Modul nach se
 
 ---
 
-## 🛠️ Technologie-Stack
+## Technologie-Stack
 
 | Schicht | Technologie |
 | :--- | :--- |
