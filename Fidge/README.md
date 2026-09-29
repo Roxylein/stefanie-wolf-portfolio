@@ -95,6 +95,5 @@ The project currently demonstrates physical operation and state-dependent action
 ## Project Contribution
 
 **Stefanie Wolf:** Original idea, end-to-end system conception, architecture, hardware integration, and iterative sensor and behavior tuning.
-
-The code was generated through collaboration with four AI systems; no code was written manually. My contribution centers on defining the system, directing the AI-assisted implementation, bringing the components together, and refining their behavior on physical hardware.
+The code was generated through collaboration with AI systems.
 
