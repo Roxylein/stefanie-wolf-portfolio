@@ -1,4 +1,4 @@
-# Wolf · Portfolio & Engineering Showcase
+# Stefanie Wolf · Portfolio & Engineering Showcase
 > **KI-Produktentwicklung, Multimodale Sprachassistenz & Angewandte Robotik**
 
 Willkommen in meinem Portfolio! Hier dokumentiere ich ausgewählte, interaktive Software- und Technologieprojekte mit Fokus auf realen geschäftlichen Mehrwert, moderne KI-Architekturen und saubere Umsetzung.
