@@ -11,7 +11,7 @@ Willkommen in meinem Portfolio! Hier dokumentiere ich ausgewählte, interaktive 
 | :--- | :--- | :---: | :--- |
 | **SmartDesk Cosmetics** | Multimodale Voice-KI, Next.js 15, Gemini 2.5, ElevenLabs, Multi-Agent RAG | **Live Demo** | [📄 Case Study lesen](./smartdesk-cosmetics/README.md) • [🌐 Live App](https://smartdesk-cosmetics.vercel.app) |
 | **SAM – Service-Assistenz-Modell** | Industrieller KI-Support, Python/Flask, RAG, Metadatenfilter, Cross-Encoder-Reranking | **Interaktive Demo** | [📄 Case Study lesen](./sam-rag/README.md) • [🌐 Live-Demo](https://sam-rag-showcase.onrender.com) |
-| **Fidge** | Hardware, Sensoren, Steuerung & Robotik-Automation | **In Dokumentation** | *(Dokumentation folgt in Kürze)* |
+| **Fidge** | Hardware, Sensoren, Steuerung & Robotik-Automation | **In Development** | [📄 Case Study lesen](./fidge/README.md) |
 
 ---
 
